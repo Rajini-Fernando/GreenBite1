@@ -1,0 +1,287 @@
+body,ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2ecc71; /* Greenbite green */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/*Section3*/
+.image {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image .background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* makes image cover like background-size: cover */
+  z-index: -1;   /* pushes image behind the content */
+}
+
+.slogans {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#slogan {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2ecc71;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/*Section5*/
+.tip {
+  padding: 30px;
+  text-align: center;
+  background: rgb(143, 229, 140);
+}
+
+.tip h2 {
+  color: rgb(0, 0, 0);
+}
+
+/*Section6-About*/
+.about {
+  padding: 10px;
+  text-align: center;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.about-cards img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.about-cards h3 {
+  margin-bottom: 10px;
+  color: tomato;
+}
+
+.about-cards p {
+  font-size: small;
+  color: aquamarine;
+}
+
+/*Section7-Explore*/
+.explore {
+  padding: 20px;
+}
+
+.explore h2, .explore p {
+  text-align: center;
+}
+
+.explore-item, .explore-item-reverse {
+  display: flex;
+  align-items: center;
+  margin: 40px;
+  gap: 15px;
+}
+
+.explore-item img, .explore-item-reverse img {
+  width: 50%;
+  height: 500px;
+  border-radius: 12px;
+  object-fit: cover; /*crops the image without streching*/
+}
+
+.text{
+  width: 60%;
+  align-content: center;
+}
+
+.explore-item-reverse {
+  flex-direction: row-reverse;
+}
+
+.button {
+  align-items: center;
+}
+
+/*Section8-facts*/
+.facts {
+  background: honeydew;
+  padding: 40px;
+}
+
+.facts h2 {
+  text-align: center;
+  color: violet;
+  margin-bottom: 20px;
+}
+
+.facts ul {
+  max-width: 800px;
+  margin: auto;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.facts li {
+  margin-bottom: 10px;
+  color: violet;
+}
+
+
+
+/*Section*/
+.footer {
+  background: rgb(129, 233, 129);
+  color: black;
+  padding: 15px 8px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: medium;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+.footer-section a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-section a:hover {
+  color:black;
+}
+
+.legal {
+  text-align: center;
+}
+
+/* Hamburger menu for tablets and phones */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+
+  .navbar ul {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* adjust according to header height */
+    right: 20px;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    width: 200px;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .navbar ul.show {
+    display: flex; /* show menu when toggled */
+  }
+
+  .navbar ul li a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar ul {
+    width: 160px;
+    top: 60px;
+    right: 15px;
+    gap: 5px;
+  }
+}

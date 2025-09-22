@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Generator - GreenBite</title>
+  <link rel="stylesheet" href="/Styles/Workout.css">
+</head>
+<body>
+    <header>
+        <!--Section1-->
+        <div class="logo">
+            <img src="/Images/logo.jpg" alt="logo">
+        </div>
+
+        <!--Section2-->
+        <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/Greenbite/1 Home.html">Home</a></li>
+                <li><a href="/Greenbite/2 Healthy.html">Healthy Recipes</a></li>
+                <li><a href="/Greenbite/3 Calorie.html">Calorie Calculator</a></li>
+                <li><a href="/Greenbite/4 Workout.html">Workout Generator</a></li>
+                <li><a href="/Greenbite/5 Mindfulness.html">Mindfulness</a></li>
+                <li><a href="/Greenbite/6 Contact.html">Contact & Feedback</a></li>
+                </ul>
+            </nav>
+    </header>
+
+  <main>
+    <nav class="work">
+      <h1>GreenBite Workouts</h1>
+    </nav>
+    <section class="workout-container">
+      <h2>Workout Generator</h2>
+      <form id="workoutForm" class="workout-form">
+        <label for="bodyPart">Choose Body Part:</label>
+        <select id="bodyPart" class="input-select">
+          <option value="arms">Arms</option>
+          <option value="legs">Legs</option>
+          <option value="full">Full Body</option>
+        </select>
+
+        <label for="equipment">Choose Equipment:</label>
+        <select id="equipment" class="input-select">
+          <option value="none">None</option>
+          <option value="dumbbells">Dumbbells</option>
+          <option value="bands">Resistance Bands</option>
+          <option value="kettlebells">Kettlebells</option>
+        </select>
+
+        <button type="submit" class="btn-main">Generate Workout</button>
+      </form>
+
+      <div id="workoutPlan" class="workout-plan"></div>
+      <div id="timer" class="timer-display"></div>
+    </section>
+  </main>
+   <footer class="footer">
+        <!--Section10-->
+        <div class="footer-container">
+            
+            <!--Quick links-->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/Greenbite/1 Home.html">Home</a></li>
+                    <li><a href="/Greenbite/2 Healthy.html">Healthy Recipes</a></li>
+                    <li><a href="/Greenbite/3 Calorie.html">Calorie Calculator</a></li>
+                    <li><a href="/Greenbite/4 Workout.html">Workout Generator</a></li>
+                    <li><a href="/Greenbite/5 Mindfulness.html">Mindfulness</a></li>
+                    <li><a href="/Greenbite/6 Contact.html">Contact & Feedback</a></li>
+                </ul>
+            </div>
+
+            <!--Contact Info-->
+            <div class="footer-section">
+                <h3>Contact Us </h3>
+                <p>📍GreenBite HQ, Colombo, Sri Lanka</p>
+                <p>📧support@greenbite.com</p>
+                <p>☎ +94 77 123 4567</p>
+            </div>
+
+            <!--Social Media-->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="https://www.facebook.com/index.php/">Facebook</a> <br>
+                    <a href="https://www.instagram.com/">Instagram</a> <br>
+                    <a href="https://twitter.com/i/flow/signup">Twitter</a> <br>
+                    <a href="https://www.youtube.com/">Youtube</a> <br>
+                </p>
+            </div>
+
+            <!--Legal & copyright-->
+            <div class="legal">
+                <p><a href="#">Privacy Policy</a>  | <a href="#">Terms & Conditions</a></p>
+                <p>© 2025 GreenBite. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+  <script src="/Scripts/workout.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Styles/calc.css">
+</head>
+<body>
+    <header>
+        <!--Section1-->
+        <div class="logo">
+            <img src="/Images/logo.jpg" alt="logo">
+        </div>
+
+        <!--Section2-->
+        <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/Greenbite/1 Home.html">Home</a></li>
+                <li><a href="/Greenbite/2 Healthy.html">Healthy Recipes</a></li>
+                <li><a href="/Greenbite/3 Calorie.html">Calorie Calculator</a></li>
+                <li><a href="/Greenbite/4 Workout.html">Workout Generator</a></li>
+                <li><a href="/Greenbite/5 Mindfulness.html">Mindfulness</a></li>
+                <li><a href="/Greenbite/6 Contact.html">Contact & Feedback</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main class="container">
+        <!--  Calculator   -->
+          <section class="card">
+            <h1><i data-lucide="calculator"></i>Nutrition Calculator</h1>
+            <p class="small">Enter details to get calories & macros</p>
+
+            <form id="calcForm">
+                <div class="row">
+                    <div class="field">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" min="10" max="100" placeholder="e.g.25" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Gender</label>
+                        <div class="inline-radio">
+                            <label><input type="radio" name="gender" value="male" checked>Male</label>
+                            <label><input type="radio" name="gender" value="female">Female</label>
+                            <label><input type="radio" name="gender" value="prefer not to say">Prefer not to say</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" min="50" max="250" placeholder="e.g. 170" required>
+                    </div>
+                    <div class="field">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" min="20" max="400" placeholder="e.g. 45" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="activity">Activity Level</label>
+                    <select id="activity">
+                        <option value="1.2">Sedentary (little/no exercise)</option>
+                        <option value="1.375">Lightly active (1-3 days/week)</option>
+                        <option value="1.55" selected>Moderately active (3-5 days/week)</option>
+                        <option value="1.725">Very active (6-7 days/week)</option>
+                        <option value="1.9">Super active (physical job)</option>
+                    </select>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn btn-primary"><i data-lucide="play"></i>Calculate</button>
+                    <button type="button" id="resetBtn" class="btn btn-ghost"><i data-lucide="rotate-ccw"></i>Reset</button>
+                </div>
+            </form>
+            <footer>Uses Mifflin-St Jeor equation. Results are estimates.</footer>
+          </section>
+
+          <!-- Results  -->
+           <aside class="results">
+            <div class="stat">
+                <h3><i data-lucide="flame"></i>BMR</h3>
+                <p><span id="bmrValue" class="counter">-</span>kcal/day</p>
+            </div>
+
+            <div class="stat">
+                <h3><i data-lucide="activity"></i>TDEE</h3>
+                <p><span id="tdeeValue" class="counter">-</span>kcal/day</p>
+                <p class="small" id="activityLabel">Activity factor: -</p>
+            </div>
+
+            <div class="stat">
+                <h3><i data-lucide="pie-chart"></i>Macros</h3>
+                <div class="bars">
+                    <div class="bar">
+                        <div class="label">Carbs</div>
+                        <div class="progress-wrap"><div class="progress-carbs" id="carbBar"></div></div>
+                        <div class="macro-values" id="carbVal">-g</div>
+                    </div>
+                    <div class="bar">
+                        <div class="label">Fat</div>
+                        <div class="progress-wrap"><div class="progress-fat" id="fatBar"></div></div>
+                        <div class="macro-values" id="fatVal">-g</div>
+                    </div>
+                </div>
+                <p class="small">Total: <span id="macroCalories">-</span>kcal</p>
+            </div> 
+           </aside>
+    </main>
+    
+    <script src="/Scripts/calc.js"></script>
+</body>
+</html>

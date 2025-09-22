@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Recipes</title>
+  <link rel="stylesheet" href="/Styles/healthy.css">
+</head>
+<body>
+  <header>
+      
+    <!-- Logo -->
+    <div class="logo">
+            <img src="/Images/logo.jpg" alt="Greenbite Logo">
+    </div>
+
+    <!-- Navbar -->
+     <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+    <nav class="navbar">
+        <ul >
+            <li><a href="/Greenbite/1 Home.html">Home</a></li>
+            <li><a href="/Greenbite/2 Healthy.html">Healthy Recipes</a></li>
+            <li><a href="/Greenbite/3 Calorie.html">Calorie Calculator</a></li>
+            <li><a href="/Greenbite/4 Workout.html">Workout Generator</a></li>
+            <li><a href="/Greenbite/5 Mindfulness.html">Mindfulness</a></li>
+            <li><a href="/Greenbite/6 Contact.html">Contact & Feedback</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <h1>Healthy Recipes</h1>
+  <div class="search-bar">
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="Breakfast">Breakfast</option>
+    <option value="Lunch">Lunch</option>
+    <option value="Dinner">Dinner</option>
+    <option value="Snacks">Snacks</option>
+  </select>
+  <input type="text" id="searchInput" placeholder="Search recipes by name..." />
+</div>
+
+
+  <div class="recipes" id="recipesContainer">
+    <!-- ==== BREAKFAST ==== -->
+    <div class="card" onclick="openModal('Avocado Toast')">
+      <img src="/Images/Recipes/Avacado Toast.jpg" alt="Avocado Toast">
+      <div class="card-body">
+        <h3>Avocado Toast</h3>
+        <p><strong>Breakfast</strong> - Whole grain bread topped with avocado and seeds.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Oatmeal Bowl')">
+      <img src="/Images/Recipes/Oatmeal Bowl.jpg" alt="Oatmeal Bowl">
+      <div class="card-body">
+        <h3>Oatmeal Bowl</h3>
+        <p><strong>Breakfast</strong> - Warm oats with fruit and nuts.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Greek Yogurt Parfait')">
+      <img src="/Images/Recipes/Greek yogurt.jpg" alt="Greek Yogurt Parfait">
+      <div class="card-body">
+        <h3>Greek Yogurt Parfait</h3>
+        <p><strong>Breakfast</strong> - Layers of yogurt, granola, and berries.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Veggie Omelette')">
+      <img src="/Images/Recipes/veggie omlette.jpg" alt="Veggie Omelette">
+      <div class="card-body">
+        <h3>Veggie Omelette</h3>
+        <p><strong>Breakfast</strong> - Egg omelette packed with veggies.</p>
+      </div>
+    </div>
+
+    <!-- ==== LUNCH ==== -->
+    <div class="card" onclick="openModal('Quinoa Salad')">
+      <img src="/Images/Recipes/Quinoa salad.jpg" alt="Quinoa Salad">
+      <div class="card-body">
+        <h3>Quinoa Salad</h3>
+        <p><strong>Lunch</strong> - Fresh quinoa salad with veggies.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Grilled Chicken Wrap')">
+      <img src="/Images/Recipes/chicken wrap.jpg" alt="Grilled Chicken Wrap">
+      <div class="card-body">
+        <h3>Grilled Chicken Wrap</h3>
+        <p><strong>Lunch</strong> - Whole wheat wrap with grilled chicken and veggies.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Lentil Soup')">
+      <img src="/Images/Recipes/lentil soup.jpg" alt="Lentil Soup">
+      <div class="card-body">
+        <h3>Lentil Soup</h3>
+        <p><strong>Lunch</strong> - Hearty lentil soup rich in fiber.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Stuffed Bell Peppers')">
+      <img src="/Images/Recipes/stuffed peppers.jpg" alt="Stuffed Bell Peppers">
+      <div class="card-body">
+        <h3>Stuffed Bell Peppers</h3>
+        <p><strong>Lunch</strong> - Bell peppers filled with quinoa and beans.</p>
+      </div>
+    </div>
+
+    <!-- ==== DINNER ==== -->
+    <div class="card" onclick="openModal('Baked Salmon')">
+      <img src="/Images/Recipes/grilled salmon.jpg" alt="Baked Salmon">
+      <div class="card-body">
+        <h3>Grilled Salmon</h3>
+        <p><strong>Dinner</strong> - Salmon fillet baked with herbs.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Veggie Stir-Fry')">
+      <img src="/Images/Recipes/veggie stir fry.jpg" alt="Veggie Stir-Fry">
+      <div class="card-body">
+        <h3>Veggie Stir-Fry</h3>
+        <p><strong>Dinner</strong> - Colorful stir-fried veggies with tofu.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Whole Wheat Pasta')">
+      <img src="/Images/Recipes/pasta salad.jpg" alt="Whole Wheat Pasta">
+      <div class="card-body">
+        <h3> Pasta salad</h3>
+        <p><strong>Dinner</strong> - Pasta with tomato and spinach sauce.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Turkey Meatballs')">
+      <img src="/Images/Recipes/meatballs.jpg" alt="Turkey Meatballs">
+      <div class="card-body">
+        <h3>Turkey Meatballs</h3>
+        <p><strong>Dinner</strong> - Lean turkey meatballs in marinara sauce.</p>
+      </div>
+    </div>
+
+    <!-- ==== SNACKS ==== -->
+    <div class="card" onclick="openModal('Energy Balls')">
+      <img src="/Images/Recipes/energy bar.jpg" alt="Energy Balls">
+      <div class="card-body">
+        <h3>Energy Bar</h3>
+        <p><strong>Snacks</strong> - No-bake oats and nut butter bites.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Apple Slices with Almond Butter')">
+      <img src="/Images/Recipes/apple.jpg" alt="Apple Slices with Almond Butter">
+      <div class="card-body">
+        <h3>Apple Slices with peanut Butter</h3>
+        <p><strong>Snacks</strong> - Apple slices topped with almond butter.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Hummus & Veggie Sticks')">
+      <img src="/Images/Recipes/hummus veggie.jpg" alt="Hummus and Veggie Sticks">
+      <div class="card-body">
+        <h3>Hummus & Veggie Sticks</h3>
+        <p><strong>Snacks</strong> - Classic hummus dip with fresh veggies.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal('Trail Mix')">
+      <img src="/Images/Recipes/trail mix.jpg" alt="Trail Mix">
+      <div class="card-body">
+        <h3>Trail Mix</h3>
+        <p><strong>Snacks</strong> - Nuts, seeds, and dried fruit mix.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2 id="recipeTitle"></h2>
+      <img id="recipeImage" src="" alt="" style="width:100%; max-height:250px; object-fit:cover; border-radius:10px; margin-bottom:1rem;">
+      <h3>Ingredients</h3>
+      <ul id="recipeIngredients"></ul>
+      <h3>Steps</h3>
+      <ol id="recipeSteps"></ol>
+      <h3>Nutrition Info</h3>
+      <table>
+        <thead>
+          <tr><th>Calories</th><th>Carbs</th><th>Protein</th><th>Fat</th></tr>
+        </thead>
+        <tbody id="nutritionTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+   <footer class="footer">
+        <!--Section10-->
+        <div class="footer-container">
+            
+            <!--Quick links-->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/Greenbite/1 Home.html">Home</a></li>
+                    <li><a href="/Greenbite/2 Healthy.html">Healthy Recipes</a></li>
+                    <li><a href="/Greenbite/3 Calorie.html">Calorie Calculator</a></li>
+                    <li><a href="/Greenbite/4 Workout.html">Workout Generator</a></li>
+                    <li><a href="/Greenbite/5 Mindfulness.html">Mindfulness</a></li>
+                    <li><a href="/Greenbite/6 Contact.html">Contact & Feedback</a></li>
+                </ul>
+            </div>
+
+            <!--Contact Info-->
+            <div class="footer-section">
+                <h3>Contact Us </h3>
+                <p>📍GreenBite HQ, Colombo, Sri Lanka</p>
+                <p>📧support@greenbite.com</p>
+                <p>☎ +94 77 123 4567</p>
+            </div>
+
+            <!--Social Media-->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="https://www.facebook.com/index.php/">Facebook</a> <br>
+                    <a href="https://www.instagram.com/">Instagram</a> <br>
+                    <a href="https://twitter.com/i/flow/signup">Twitter</a> <br>
+                    <a href="https://www.youtube.com/">Youtube</a> <br>
+                </p>
+            </div>
+
+            <!--Legal & copyright-->
+            <div class="legal">
+                <p><a href="#">Privacy Policy</a>  | <a href="#">Terms & Conditions</a></p>
+                <p>© 2025 GreenBite. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+  <script src="/Scripts/Healthy.js"></script>
+</body>
+</html>
